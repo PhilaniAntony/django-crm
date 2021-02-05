@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+
+  <h1>Assign an agent to this lead </h1>
+  <form method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit" class="btn btn-outline-secondary">Submit</button>
+  </form>
+  <br />
+  <a href="{% url 'leads:homepage' %}">Leads</a>
+</div>
+{% endblock content %}
