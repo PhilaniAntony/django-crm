@@ -146,7 +146,7 @@ class CategoryListView(LoginRequiredMixin, ListView):
                 organization=user.agent.organization)
 
         context.update({
-            'unassigned_lead_count': queryset.filter(category__isnull=True).count()
+            'unassigned_lead_count': queryset.filter(category__isnull=True).count(),
         })
 
         return context

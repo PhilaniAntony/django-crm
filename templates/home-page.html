@@ -34,7 +34,7 @@
             <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">LAST NAME</th>
             <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">AGE</th>
             <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">EMAIL</th>
-            <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">CELL PHONE NUMBER</th>
+            <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">PHONE NUMBER</th>
             <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">CATEGORY</th>
           </tr>
         </thead>
@@ -43,15 +43,14 @@
           <tr>
             <td class="px-4 py-3">
               <a href="{% url 'leads:lead-detail' lead.pk %}" class="hover:text-blue-500">
-                {{lead}}
+                {{lead.first_name}}
               </a>
             </td>
-            <td class="px-4 py-3">{{lead.first_name}}</td>
             <td class="px-4 py-3">{{lead.last_name}}</td>
-            <td class="px-4 py-3 text-lg text-gray-900">{{lead.age}}</td>
+            <td class="px-4 py-3">{{lead.age}}</td>
             <td class="px-4 py-3 text-lg text-gray-900">{{lead.email}}</td>
             <td class="px-4 py-3 text-lg text-gray-900">{{lead.phone_number}}</td>
-            <td class="px-4 py-3 text-lg text-green-900">{{lead.category}}</td>
+            <td class="px-4 py-3 text-lg text-gray-900">{{lead.category}}</td>
             
           </tr>
           {% endfor %}
